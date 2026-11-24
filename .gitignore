@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 本地运行产物（示例与桥接演示）
+tmp-bridge/
+tmp-bridge-js/
+tmp-*/
+state/
+outbox/
+intake/
+archive/
+*.db
+*.db-wal
+*.db-shm

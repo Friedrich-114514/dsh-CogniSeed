@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cogniseed"
+version = "1.0.0"
+description = "Cognition-first growth engine for AI companions: growth means knowledge survived consolidation, not stat drift."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Friedrich-114514", email = "320096533+Friedrich-114514@users.noreply.github.com" }]
+keywords = [
+  "ai-companion",
+  "memory",
+  "spaced-repetition",
+  "consolidation",
+  "cognitive-architecture",
+  "zero-dependency",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+# 零第三方依赖：这一行是空列表，并且不接受变更（见 README 贡献指引）
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["cogniseed", "cogniseed.storage"]
+
+[tool.setuptools.package-data]
+cogniseed = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

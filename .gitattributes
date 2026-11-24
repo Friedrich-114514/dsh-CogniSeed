@@ -1,0 +1,13 @@
+# 统一换行：仓库内一律 LF，检出时按平台转换
+* text=auto eol=lf
+
+# 二进制
+*.db binary
+*.png binary
+*.jpg binary
+
+# 语言
+*.py text
+*.md text
+*.js text
+*.toml text
